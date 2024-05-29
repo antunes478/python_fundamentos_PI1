@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Loja de Informática</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/My new design.png') }}">
+</head>
+<body>
+    <header id="main-header">
+        <div class="container">
+            <img src="{{ url_for('static', filename='img/My new design.png')}}" class="logo"><h1>Loja de Informática J&T</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Página Inicial</a></li>
+                    <li><a href="#produtos">Produtos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                    <a href="{{ url_for('carrinho_de_compras') }}"><img src="{{ url_for('static', filename='img/formato-preto-do-carrinho-de-compras.png') }}" class="carrinho-de-compras"></a>
+                </ul>
+            </nav>
+
+            <div>
+                <button id="redirect-button">
+                    <a href="{{ url_for('add_product') }}">Adicionar Produto</a>
+                </button>
+            </div>
+
+            <div id="search-bar" class="hidden">
+                <input type="text" id="search-input" placeholder="Pesquisar produtos...">
+                <button onclick="searchProducts()">Buscar</button>
+            </div>
+        </div>
+    </header>
+
+    <section id="home">
+        <div class="container">
+            <img src="{{ url_for('static', filename='img/banner.png') }}" alt="Minha Loja de Informática">
+        </div>
+    </section>
+
+    <section id="produtos">
+        <div class="container2">
+            <h2>Nossos Produtos</h2>
+            <div class="produto1">
+                <a class="produto1-img">
+                    <img src="{{ url_for('static', filename='img/processador.jpeg') }}" alt="Produto 1">
+                </a>
+                <h3>Processador Intel Core i9 12900K 16-Core (3.2GHz-5.2GHz) 30MB Skt1700</h3>
+                <p>
+                    <ul>
+                        <li>Processador Intel Core i9-12900K</li>
+                        <li>Processador com 16 Cores</li>
+                        <li>Socket LGA1700</li>
+                        <li>TDP Base de 125W</li>
+                        <li>Aviso: Este modelo não inclui Cooler</li>
+                    </ul>
+                </p>
+                <span class="preco">€215</span>
+                <a href="#" class="btn">
+                <button><img src="{{ url_for('static', filename='img/formato-preto-do-carrinho-de-compras.png') }}" alt="Descrição da imagem"></button>
+                </a>
+            </div>
+            <div class="produto2">
+                <a class="produto1-img">
+                    <img src="{{ url_for('static', filename='img/placa grafica 4090.jpg')}}" alt="produto 2">
+                </a>
+                <h3>ASUS ROG Strix GeForce RTX 4090 OC 24GB GDDR6X</h3>
+                <p>
+                    <ul>
+                        <li>Motor gráfico NVIDIA® GeForce RTX® 4090</li>
+                        <li>Núcleos CUDA TBD</li>
+                        <li>OpenGL® OpenGL® 4.6</li>
+                        <li>Relógio do motor a definir</li>
+                        <li>Interface de memória 384 bits</li>
+                        <li>Memória de vídeo 24 GB GDDR6X</li>
+                        <li class="hidden">Conector de alimentação 1 x 16 pinos</li>
+                        <li class="hidden">E/S</li>
+                        <li class="hidden">2x HDMI 2.1a nativo</li>
+                        <li class="hidden">3 x Native DisplayPort 1.4a</li>
+                        <li class="hidden">Compatível com HDCP HDCP 2.3</li>
+                        <li class="hidden">Máx. Resolução 7680x4320</li>
+                        <li class="hidden">Suporte máximo de exibição 4</li>
+                        <li class="hidden">Suporte NVLink/ Crossfire NA</li>
+                        <li class="hidden">Fonte de alimentação recomendada 1000W</li>
+                        <li class="hidden">Barramento PCIe 4.0 Padrão</li>
+                        <li class="hidden">O que está na caixa:</li>
+                        <ul class="hidden">
+                            <li class="hidden">1x cartão de coleção</li>
+                            <li class="hidden">1 x configuração de velocidade manual</li>
+                            <li class="hidden">1 x cabo adaptador</li>
+                            <li class="hidden">1 x suporte para placa gráfica ROG</li>
+                            <li class="hidden">1 x ROG Velcro Hook&Loop</li>
+                            <li class="hidden">1 x cartão de agradecimento</li>
+                            <li class="hidden">Pacote de software ASUS GPU Tweak III e GeForce Game Ready Driver & Studio Driver: faça o download de todo o software do local de suporte.</li>
+                        </ul>
+                        <li class="hidden">Ranhura 3.5</li>
+                        <li class="hidden">Dimensão:</li>
+                        <ul class="hidden">
+                            <li class="hidden">Tamanho do cartão (cm/polegada) 357,6 x 149,3 x 70,1 mm</li>
+                            <li class="hidden">Caixa de cores (mm) 420 * 226 * 126 mm</li>
+                        </ul>
+                        <li class="hidden">Peso:</li>
+                        <ul class="hidden">
+                            <li class="hidden">Cartão Único (KG) 2.503 kg</li>
+                            <li class="hidden">Peso do produto (com embalagem) (KG) 3,65 kg</li>
+                            
+                        </ul>
+                       
+                    </ul>
+                    <li><a href="#" class="saber-mais">Saber Mais</a></li>
+                </p>
+            </div>
+        </div>
+    </section>
+
+   
+    <section id="contato">
+        <footer>
+            <div class="container">
+                <p>&copy; 2024 Minha Loja de Informática</p>
+                <button id="toggle-contact-button">Contato &#x25BC;</button>
+                <div id="contact-info" class="hidden">
+                    <p>jacintoleitenorego123@gmail.com</p>
+                    <p>Iroku_Tacaro69@gmail.com</p>
+                </div>
+            </div>
+        </footer>
+    </section>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,308 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#main-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #111;
+    color: #fff;
+    padding: 10px;
+    z-index: 1000;
+    transition: top 0.3s; /* Adiciona uma transição suave */
+}
+
+/* Estilos adicionais para o restante do conteúdo da página */
+#main-header.hidden {
+    top: -100px; /* Ajuste conforme necessário para ocultar parte do cabeçalho */
+}
+
+
+
+#main-header.scrolled {
+    top: -100px; /* Ajuste conforme necessário para ocultar parte do cabeçalho */
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.container h1 {
+    font-size: 40px;
+    margin-left: -100px;
+}
+
+.container img.logo {
+    float: left; /* Coloca a imagem à esquerda do texto */
+    margin-right: 20px; /* Espaçamento entre a imagem e o texto */
+    margin-left:-100px;
+    height: 90px;
+    width: 90px;
+}
+
+
+
+header {
+    background-color: #111;
+    color: #fff;
+    padding: 10px; /* Ajuste o padding vertical conforme desejado */
+    position: relative; /* Adicionado para posicionamento das manchas */
+    z-index: 1; /* Certifique-se de que o cabeçalho está acima das manchas */
+    overflow: hidden;
+}
+
+
+header::before,
+header::after {
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: rgba(255, 0, 255, 0.4);
+    filter: blur(75px);
+    z-index: 0;
+}
+
+header::before {
+    top: -50px;
+    left: -50px;
+}
+
+header::after {
+    bottom: -50px;
+    right: -50px;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 2px;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header nav ul li:hover {
+    border-bottom: 1px solid #ff00ff; /* Adiciona a borda inferior com cor roxa quando o mouse passa por cima */
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.carrinho-de-compras {
+    width: 30px;
+    height: 30px;
+    text-align: left;
+    position: absolute; /* Define a posição absoluta */
+    top: 24%; /* Alinha o topo do botão ao centro vertical */
+    transform: translateY(265%); /* Move o botão para cima metade da sua altura */
+    filter: brightness(0) invert(1); /* Aplica um filtro para tornar a imagem branca */
+}
+
+.hidden {
+    display: none;
+}
+
+#redirect-button {
+    border: none; /* Remove a borda do botão */
+    padding: 10px; /* Padding do botão */
+    cursor: pointer; /* Mostra o cursor de ponteiro ao passar o mouse */
+    border-radius: 5px;
+    background-color: #555;
+    color: #fff; /* Cor do texto do botão */
+    text-align: right;
+    float: right;
+    transform: translateY(-220%); /* Move o botão para cima metade da sua altura */
+    margin-right: -170px;
+}
+
+#redirect-button a {
+    color: #fff; /* Cor do link */
+    text-decoration: none; /* Remove sublinhado do link */
+}
+
+#search-bar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 20px;
+    position: absolute; /* Posiciona a barra de pesquisa */
+    top: 102px; /* Ajuste conforme necessário */
+    right: 25px;
+    background-color: #333;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#search-input {
+    width: 200px;
+    padding: 5px;
+    border: 1px solid #00FFFF;
+    border-radius: 5px;
+}
+
+#search-bar button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #978181;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+
+#search-bar button:hover {
+    background-color: #00FFFF;
+}
+/* Estilos adicionais para o formulário de adição de produto */
+#add-product form {
+    display: flex;
+    flex-direction: column;
+}
+
+#add-product form div {
+    margin-bottom: 10px;
+}
+
+#add-product form label {
+    margin-bottom: 5px;
+}
+
+#add-product form input, #add-product form textarea {
+    padding: 5px;
+    font-size: 1em;
+}
+
+#add-product form button {
+    padding: 10px;
+    background-color: #00FFFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#add-product form button:hover {
+    background-color: #00FFFF;
+}
+
+
+
+#home img {
+    height: auto; /* ou 100% dependendo do que deseja */
+    width: 100%;
+    margin-top: 200px;
+}
+
+.container2 {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+#produtos {
+    padding: 50px 0;
+}
+
+ul {
+    list-style-type: none; /* Remove os pontos das listas */
+    padding: 0; /* Remove o padding padrão da lista */
+}
+
+ul li {
+    margin-left: 0; /* Remove qualquer margem à esquerda */
+}
+
+.produto1 {
+    margin-bottom: 50px; /* Adiciona margem inferior para separar os produtos */
+}
+
+.produto1-img {
+    width: 350px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.btn button {
+    border: none; /* Remove a borda do botão */
+    background: none; /* Remove o fundo padrão do botão */
+    padding: 0; /* Remove o padding padrão do botão */
+    cursor: pointer; /* Mostra o cursor de ponteiro ao passar o mouse */
+}
+
+.btn button img {
+    display: block; /* Remove qualquer espaço em torno da imagem */
+    width: 25px;
+    height: 25px;
+}
+
+.produto1 h3 {
+    margin-top: 10px;
+}
+
+
+.preco {
+    font-size: 1.2em;
+    color: #333;
+}
+
+footer {
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    clear: both; /* Limpa flutuações para garantir que o rodapé seja exibido corretamente */
+    position: relative;
+    z-index: 1; /* Certifique-se de que o rodapé está acima das manchas */
+    overflow: hidden; /* Adicionado para garantir que as manchas não escapem do rodapé */
+}
+
+footer::before,
+footer::after {
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: rgba(255, 0, 255, 0.4);
+    filter: blur(75px);
+    z-index: 0;
+}
+
+footer::before {
+    top: -50px;
+    left: -50px;
+}
+
+footer::after {
+    bottom: -50px;
+    right: -50px;
+}
+
+
+.hidden {
+    display: none;
+}
+
+#toggle-contact-button {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 10px;
+    transition: transform 0.3s;
+}
+
+#toggle-contact-button.rotated {
+    transform: rotate(180deg);
+}

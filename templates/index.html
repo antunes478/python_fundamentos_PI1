@@ -21,9 +21,8 @@
             </nav>
 
             <div>
-                <button id="redirect-button">
-                    <a href="{{ url_for('add_product') }}">Adicionar Produto</a>
-                </button>
+                <a id="redirect-button" href="{{ url_for('add_product') }}">Adicionar Produto</a>
+
             </div>
 
             <div id="search-bar" class="hidden">
@@ -42,6 +41,8 @@
     <section id="produtos">
         <div class="container2">
             <h2>Nossos Produtos</h2>
+            <br>
+            <br>
             <div class="produto1">
                 <a class="produto1-img">
                     <img src="{{ url_for('static', filename='img/processador.jpeg') }}" alt="Produto 1">
@@ -57,8 +58,8 @@
                     </ul>
                 </p>
                 <span class="preco">€215</span>
-                <a href="#" class="btn">
-                <button><img src="{{ url_for('static', filename='img/formato-preto-do-carrinho-de-compras.png') }}" alt="Descrição da imagem"></button>
+                <a class="carrinho-img" id="carrinho-img" href="#" data-product-id="produto1">
+                    <img src="{{ url_for('static', filename='img/formato-preto-do-carrinho-de-compras.png') }}" alt="Carrinho de Compras">
                 </a>
             </div>
             <div class="produto2">
@@ -104,9 +105,7 @@
                         <ul class="hidden">
                             <li class="hidden">Cartão Único (KG) 2.503 kg</li>
                             <li class="hidden">Peso do produto (com embalagem) (KG) 3,65 kg</li>
-                            
                         </ul>
-                       
                     </ul>
                     <li><a href="#" class="saber-mais">Saber Mais</a></li>
                 </p>
@@ -114,7 +113,6 @@
         </div>
     </section>
 
-   
     <section id="contato">
         <footer>
             <div class="container">

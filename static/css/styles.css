@@ -226,23 +226,13 @@ ul li {
     margin-bottom: 50px; /* Adiciona margem inferior para separar os produtos */
 }
 
-.produto1-img {
-    width: 350px;
-    height: 200px;
-    border-radius: 10px;
+.produto1 .carrinho-img img {
+    width: 30px !important; /* Defina o tamanho desejado */
+    height: auto; /* Mantenha a proporção original */
 }
 
-.btn button {
-    border: none; /* Remove a borda do botão */
-    background: none; /* Remove o fundo padrão do botão */
-    padding: 0; /* Remove o padding padrão do botão */
-    cursor: pointer; /* Mostra o cursor de ponteiro ao passar o mouse */
-}
-
-.btn button img {
-    display: block; /* Remove qualquer espaço em torno da imagem */
-    width: 25px;
-    height: 25px;
+.produto1 .carrinho-img:hover img {
+    opacity: 0.8; /* Define a opacidade ao passar o mouse */
 }
 
 .produto1 h3 {

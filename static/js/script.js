@@ -88,30 +88,40 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
+   // Lógica para botões "Saber Mais" e "Saber Menos"
+var saberMaisButtons = document.querySelectorAll('.saber-mais');
+saberMaisButtons.forEach(function(button) {
+    button.addEventListener('click', function(event) {
+        event.preventDefault(); // Impedir o comportamento padrão do link
+        var parentProduto = button.closest('.produto2'); // Encontra o elemento pai .produto2
+        var hiddenItems = parentProduto.querySelectorAll('.hidden'); // Seleciona os itens ocultos dentro do .produto2
+        hiddenItems.forEach(function (item) {
+            item.classList.toggle('hidden'); // Alterna a classe hidden para mostrar ou ocultar os itens
+        });
+        // Alternar o texto do botão entre "Saber Mais" e "Saber Menos"
+        if (button.textContent === 'Saber Mais') {
+            button.textContent = 'Saber Menos';
+        } else {
+            button.textContent = 'Saber Mais';
+        }
+    });
+});
 
-    document.addEventListener('DOMContentLoaded', function () {
-        // Selecionar botões "Saber Mais" e adicionar eventos de clique
-        var saberMaisButtons = document.querySelectorAll('.saber-mais');
-        saberMaisButtons.forEach(function (button) {
-            button.addEventListener('click', function (event) {
-                event.preventDefault(); // Impedir o comportamento padrão do botão
-                var ul = button.parentElement.nextElementSibling; // Encontrar o próximo elemento <ul> após o botão
-                ul.classList.toggle('hidden'); // Alternar a visibilidade do elemento <ul>
-                // Alterar o texto do botão "Saber Mais" para "Saber Menos" quando todos os itens forem revelados
-                if (ul.classList.contains('hidden')) {
-                    button.textContent = 'Saber Mais';
-                } else {
-                    button.textContent = 'Saber Menos';
-                }
-            });
+// Lógica para botões "Saber Menos"
+var saberMenosButtons = document.querySelectorAll('.saber-menos');
+saberMenosButtons.forEach(function(button) {
+    button.addEventListener('click', function(event) {
+        event.preventDefault(); // Impedir o comportamento padrão do link
+        var parentProduto = button.closest('.produto2'); // Encontra o elemento pai .produto2
+        var hiddenItems = parentProduto.querySelectorAll('.hidden'); // Seleciona os itens ocultos dentro do .produto2
+        hiddenItems.forEach(function (item) {
+            item.classList.add('hidden'); // Adiciona a classe hidden para ocultar os itens
         });
     });
-    
-    
-    
-    
+});
 
-    
+
+
     // Lógica de rolagem e header
     window.addEventListener('scroll', function() {
         console.log('Página rolada');
@@ -123,3 +133,5 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
+

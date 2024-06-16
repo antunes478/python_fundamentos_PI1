@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+    <!-- Vídeo de fundo -->
+    <video autoplay loop muted class="video-background">
+        <source src="{{ url_for('static', filename='videos/206787_small.mp4') }}" type="video/mp4">
+        Desculpe, seu navegador não suporta vídeos HTML5.
+    </video>
+
+    <!-- Barra de navegação -->
+    <nav class="navbar">
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('add_product') }}">Adicionar Produto</a>
+        <a href="#destaques">Produtos em Destaque</a>
+        <a href="#categorias">Categorias</a>
+    
+        {% if current_user.is_authenticated %}
+            <a href="{{ url_for('logout') }}">Logout</a>
+        {% else %}
+            <a href="{{ url_for('login') }}">Login</a>
+            <a href="{{ url_for('register') }}">Registrar</a>
+        {% endif %}
+    </nav>
+
+    <!-- Banner e Introdução -->
+    <section class="banner-introduction">
+        <div class="banner">
+            <div class="banner-content">
+                <h1>Bem-vindo à nossa loja de tecnologia!</h1>
+                <p>Encontre os melhores produtos de tecnologia ao melhor preço.</p>
+            </div>
+        </div>
+    
+        <div class="introduction">
+            <div class="introduction-content">
+                <h2>Sobre Nós</h2>
+                <p>Somos a loja líder em produtos de tecnologia, oferecendo uma ampla gama de dispositivos de alta qualidade, desde notebooks e PCs até acessórios como fones de ouvido e mouses. Nossa missão é proporcionar a melhor experiência de compra com produtos de ponta e atendimento de excelência.</p>
+            </div>
+        </div>
+    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <!-- Categorias -->
+    <section class="categories">
+        <div class="category-background">
+            <center><h2>Categorias</h2></center>
+            <div class="category-list">
+                <div class="category">
+                    <div class="category-card">
+                        <h3>Notebooks</h3>
+                        <a href="{{ url_for('notebooks') }}">
+                            <img src="{{ url_for('static', filename='img/images.jpg') }}" alt="Notebooks">
+                        </a>
+                    </div>
+                </div>
+                <div class="category">
+                    <div class="category-card">
+                        <h3>PCs</h3>
+                        <a href="{{ url_for('pcs') }}">
+                            <img src="{{ url_for('static', filename='img/pcs.jpg') }}" alt="PCs">
+                        </a>
+                    </div>
+                </div>
+                <div class="category">
+                    <div class="category-card">
+                        <h3>Fones</h3>
+                        <a href="{{ url_for('fones') }}">
+                            <img src="{{ url_for('static', filename='img/fones.jpg') }}" alt="Fones">
+                        </a>
+                    </div>
+                </div>
+                <div class="category">
+                    <div class="category-card">
+                        <h3>Mouses</h3>
+                        <a href="{{ url_for('mouse') }}">
+                            <img src="{{ url_for('static', filename='img/mause.jpg') }}" alt="Mouses">
+                        </a>
+                    </div>
+                </div>
+                <div class="category">
+                    <div class="category-card">
+                        <h3>Cadeiras Gamer</h3>
+                        <a href="{{ url_for('cadeiras_gamer') }}">
+                            <img src="{{ url_for('static', filename='img/1643341724_276_As-melhores-cadeiras-de-jogos-2022.jpg') }}" alt="Cadeiras Gamer">
+                        </a>
+                    </div>
+                </div>
+                <div class="category">
+                    <div class="category-card">
+                        <h3>Teclados</h3>
+                        <a href="{{ url_for('teclados') }}">
+                            <img src="{{ url_for('static', filename='img/teclado.jpg') }}" alt="Teclados">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Produtos em Destaque -->
+    <section id="destaques" class="featured-products">
+        <div class="product-wrapper">
+            <center><h2>Produtos em Destaque</h2></center>
+            <div class="product-list">
+                <div class="product">
+                    <h3>Processador Intel Core i9</h3>
+                    <p>$499.99</p>
+                    <img src="{{ url_for('static', filename='img/intel_core_i9.jpg') }}" alt="Intel Core i9">
+                    <button class="add-to-cart">Adicionar ao Carrinho</button>
+                </div>
+                <div class="product">
+                    <h3>Memória RAM 16GB</h3>
+                    <p>$89.99</p>
+                    <img src="{{ url_for('static', filename='img/memoria_ram.jpg') }}" alt="Memória RAM 16GB">
+                    <button class="add-to-cart">Adicionar ao Carrinho</button>
+                </div>
+                <div class="product">
+                    <h3>Placa Gráfica NVIDIA RTX 3080</h3>
+                    <p>$699.99</p>
+                    <img src="{{ url_for('static', filename='img/Placa Gráfica.jpg') }}" alt="NVIDIA RTX 3080">
+                    <button class="add-to-cart">Adicionar ao Carrinho</button>
+                </div>
+                <div class="product">
+                    <h3>Notebook Dell XPS 13</h3>
+                    <p>$1099.99</p>
+                    <img src="{{ url_for('static', filename='img/MSi Sword 16.jpg') }}" alt="Notebook Dell XPS 13">
+                    <button class="add-to-cart">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <p>&copy; 2024 Sua Loja de Tecnologia. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>

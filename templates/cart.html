@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seu Carrinho</title>
+</head>
+<body>
+    <h1>Seu Carrinho</h1>
+    
+    {% if cart_items %}
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Preço Unitário</th>
+                <th>Quantidade</th>
+                <th>Subtotal</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in cart_items %}
+            <tr>
+                <td>{{ item.name }}</td>
+                <td>R$ {{ item.price }}</td>
+                <td>{{ item.quantity }}</td>
+                <td>R$ {{ item.price * item.quantity }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+    <a href="{{ url_for('checkout') }}" class="btn">Finalizar Compra</a>
+    {% else %}
+    <p>Seu carrinho está vazio.</p>
+    {% endif %}
+    
+    <p><a href="{{ url_for('index') }}">Voltar para a página inicial</a></p>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mouses</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('add_product') }}">Adicionar Produto</a>
+     
+        {% if current_user.is_authenticated %}
+            <a href="{{ url_for('logout') }}">Logout</a>
+        {% else %}
+            <a href="{{ url_for('login') }}">Login</a>
+            <a href="{{ url_for('register') }}">Registrar</a>
+        {% endif %}
+    </nav>
+
+    <div class="container">
+        <h1>Mouses</h1>
+        <p>Aqui você encontra uma variedade de mouses de última geração, perfeitos para suas necessidades pessoais e profissionais.</p>
+        <!-- Adicione os detalhes dos produtos aqui -->
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Sua Loja de Tecnologia. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

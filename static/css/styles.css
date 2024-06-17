@@ -1,0 +1,369 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 15px 70px;
+    z-index: 1000;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Media Query para dispositivos móveis */
+@media screen and (max-width: 600px) {
+    .navbar {
+        display: none; /* Oculta a barra de navegação em dispositivos móveis */
+    }
+}
+/* Estilos para a página de login */
+.login-page {
+    background-image: url('https://images.unsplash.com/photo-1636489953081-c4ebbd50fa3a?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y3Nnb3xlbnwwfHwwfHx8MA%3D%3D');
+    background-size: cover;
+    /* Garante que a imagem cubra todo o fundo */
+    background-position: center;
+    /* Centraliza a imagem */
+    background-repeat: no-repeat;
+    /* Evita que a imagem seja repetida */
+    display: flex;
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    align-items: center;
+    /* Centraliza verticalmente */
+    height: 100vh;
+}
+
+.login-container {
+    width: 30%;
+    /* Largura do contêiner */
+    padding: 15px;
+    background-color: rgba(10, 10, 10, 0.89);
+    /* Contêiner transparente */
+    border-radius: 10px;
+    /* Borda arredondada */
+    box-shadow: 0 0 10px rgb(197, 0, 247);
+    /* Sombra suave */
+}
+
+/* Estilos para a página de registro */
+.register-page {
+    background-image: url('https://res.cloudinary.com/corsair-pwa/image/upload/f_auto,q_auto/v1665096094/akamai/landing/PSU-Family-Page/images/videoFrame_RGB.JPG');
+    background-size: cover;
+    /* Garante que a imagem cubra todo o fundo */
+    background-position: center;
+    /* Centraliza a imagem */
+    background-repeat: no-repeat;
+    /* Evita que a imagem seja repetida */
+    display: flex;
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    align-items: center;
+    /* Centraliza verticalmente */
+    height: 100vh;
+}
+
+.register-container {
+    width: 30%;
+    /* Largura do contêiner */
+    padding: 15px;
+    background-color: rgba(10, 10, 10, 0.925);
+    /* Contêiner transparente */
+    border-radius: 10px;
+    /* Borda arredondada */
+    box-shadow: 0 0 10px rgb(191, 7, 228);
+    /* Sombra suave */
+}
+
+h1 {
+    text-align: center;
+    /* Centraliza o título */
+    color: rgb(253, 253, 253);
+    /* Cor do texto */
+    font-size: 20px;
+}
+
+form {
+    text-align: center;
+    /* Centraliza o formulário */
+}
+
+p {
+    text-align: center;
+    /* Centraliza o título */
+    color: rgb(248, 247, 247);
+    /* Cor do texto */
+    font-size: 20px;
+}
+
+h3 {
+    text-align: center;
+    /* Centraliza o título */
+    color: rgb(253, 253, 253);
+    /* Cor do texto */
+    font-size: 20px;
+
+}
+
+.username-label,
+.password-label,
+.gmail-label {
+    color: rgb(253, 251, 251);
+}
+
+input[type="text"],
+input[type="password"],
+input[type="gmail"] {
+    width: 40%;
+    padding: 8px;
+    margin-bottom: 10px;
+    display: block;
+    margin: 0 auto;
+    color: rgb(0, 0, 0);
+}
+
+button {
+    width: 40%;
+    padding: 8px;
+    background-color: #000000d7;
+    color: rgb(252, 250, 250);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+}
+
+.banner-introduction {
+    background-color: rgba(0, 0, 0, 0.712); /* Fundo preto semitransparente */
+    color: #fff; /* Texto branco */
+    border-radius: 15px; /* Bordas arredondadas */
+    padding: 40px 20px; /* Espaçamento interno */
+    text-align: center;
+}
+
+.banner {
+    margin-bottom: 40px; /* Espaçamento inferior */
+}
+
+.banner-content, .introduction-content {
+    max-width: 600px; /* Largura máxima do conteúdo */
+    margin: 0 auto; /* Centraliza o conteúdo */
+}
+
+.banner h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.banner p, .introduction p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Estilos gerais para todas as resoluções */
+
+.categories {
+    margin-bottom: 40px;
+}
+
+.category-background {
+    background-color: rgba(0, 0, 0, 0.712);
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.category-background h2 {
+    color: rgba(255, 255, 255, 1);
+    margin-bottom: 20px;
+}
+
+.category-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.category {
+    width: calc(28% - 30px);
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.category-card {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border: 5px solid #000000bb;
+    border-radius: 5px;
+    box-shadow: 0 6px 8px rgba(161, 204, 230, 0.411);
+    margin: 40px; /* Ajuste o valor conforme necessário */
+}
+
+.category-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.category-name {
+    position: absolute;
+    top: -22px; /* Ajuste conforme necessário para a posição desejada */
+    border-radius: 5px;
+    margin-left: 38px;
+    left: 100;
+    width: 45%;
+    text-align: center;
+    color: white;
+    font-size: 1.2em;
+    padding: 0.5px 0; /* Ajuste o padding conforme necessário */
+    background-color: rgba(0, 0, 0, 0.623);
+    border-radius: 15px 15px 0 0;
+}
+/* Estilos para dispositivos móveis */
+@media screen and (max-width: 600px) {
+    .categories {
+        margin-bottom: 20px; /* Ajuste menor de margem inferior */
+    }
+
+    .category-background {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    .category-background h2 {
+        margin-bottom: 15px;
+    }
+
+    .category-list {
+        padding: 15px;
+        gap: 10px;
+    }
+
+    .category {
+        width: 100%; /* Ocupa toda a largura disponível */
+    }
+
+    .category-card {
+        width: calc(50% - 10px); /* Para ocupar 50% do espaço disponível com espaço entre as categorias */
+        max-width: 200px; /* Largura máxima do card */
+        padding: 8px;
+        text-align: left; /* Alinha o texto à esquerda dentro do card */
+    }
+
+    .category img {
+        width: 100%;
+        height: auto;
+        max-width: 100px; /* Largura máxima da imagem */
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .category-card h3 {
+        font-size: 1em;
+        white-space: nowrap; /* Evita que o texto quebre linha */
+        position: static; /* Volta a posição do título para o padrão */
+        background-color: transparent; /* Remove o fundo do título */
+        color: inherit; /* Usa a cor de texto padrão */
+        border-radius: 0; /* Remove bordas arredondadas */
+        padding: 0; /* Remove o espaçamento interno */
+        margin-top: 10px; /* Adiciona margem acima do título */
+    }
+}
+
+
+
+/* Produtos em destaque */
+.featured-products {
+    margin-bottom: 80px;
+}
+
+.product-wrapper {
+    background-color: rgba(0, 0, 0, 0.692); /* Cor preta com 50% de opacidade */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 10px; /* Borda arredondada */
+    color: #e4e3e3;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.product {
+    width: 200px;
+    padding: 10px;
+    text-align: center;
+    border: 5px solid #000000bb;
+    box-shadow: 0 6px 8px rgba(233, 233, 233, 0.411); /* Sombra suave */
+    border-radius: 10px;
+    margin-bottom: 10px;
+    color: #7f0fc088;
+}
+
+.product img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.add-to-cart {
+    background-color: #000000cc;
+    color: rgb(247, 243, 243);
+    padding: 20px px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.add-to-cart:hover {
+    background-color: #8105bbbd;
+}
+
+/* Rodapé */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #000000fd;
+    color: rgba(155, 153, 156, 0.397);
+}
+
+
+
+.video-background  {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+
+}
+

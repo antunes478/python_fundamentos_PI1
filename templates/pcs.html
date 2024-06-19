@@ -1,8 +1,86 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PCs</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .product {
+            margin-bottom: 40px;
+        }
+        .product h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .product-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .product-item {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            width: 300px;
+        }
+        .product-item h3 {
+            background-color: #007bff;
+            color: #fff;
+            margin: 0;
+            padding: 10px 0;
+        }
+        .product-item img {
+            width: 100%;
+            height: auto;
+        }
+        .product-item p {
+            padding: 10px;
+            margin: 0;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar">
@@ -20,7 +98,91 @@
     <div class="container">
         <h1>PCs</h1>
         <p>Aqui você encontra uma variedade de PCs de última geração, perfeitos para suas necessidades pessoais e profissionais.</p>
-        <!-- Adicione os detalhes dos produtos aqui -->
+
+        <!-- Dell -->
+        <div class="product dell">
+            <h2>Dell</h2>
+            <div class="product-grid">
+                <div class="product-item">
+                    <h3>Dell XPS 15</h3>
+                    <img src="{{ url_for('static', filename='img/dell_xps_15.jpg') }}" alt="Dell XPS 15">
+                    <p>Processador: Intel Core i7<br>RAM: 16GB<br>Armazenamento: 512GB SSD<br>GPU: NVIDIA GeForce GTX 1650</p>
+                </div>
+                <div class="product-item">
+                    <h3>Dell Inspiron 27 7000</h3>
+                    <img src="{{ url_for('static', filename='img/dell_inspiron_27.jpg') }}" alt="Dell Inspiron 27 7000">
+                    <p>Processador: Intel Core i5<br>RAM: 8GB<br>Armazenamento: 256GB SSD + 1TB HDD<br>GPU: Intel UHD Graphics</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- HP -->
+        <div class="product hp">
+            <h2>HP</h2>
+            <div class="product-grid">
+                <div class="product-item">
+                    <h3>HP Pavilion Gaming Desktop</h3>
+                    <img src="{{ url_for('static', filename='img/hp_pavilion_gaming.jpg') }}" alt="HP Pavilion Gaming Desktop">
+                    <p>Processador: AMD Ryzen 5<br>RAM: 16GB<br>Armazenamento: 512GB SSD + 1TB HDD<br>GPU: NVIDIA GeForce GTX 1660 Ti</p>
+                </div>
+                <div class="product-item">
+                    <h3>HP Envy 32 All-in-One</h3>
+                    <img src="{{ url_for('static', filename='img/hp_envy_32.jpg') }}" alt="HP Envy 32 All-in-One">
+                    <p>Processador: Intel Core i7<br>RAM: 16GB<br>Armazenamento: 1TB SSD<br>GPU: NVIDIA GeForce RTX 2060</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lenovo -->
+        <div class="product lenovo">
+            <h2>Lenovo</h2>
+            <div class="product-grid">
+                <div class="product-item">
+                    <h3>Lenovo ThinkPad X1 Carbon</h3>
+                    <img src="{{ url_for('static', filename='img/lenovo_thinkpad_x1_carbon.jpg') }}" alt="Lenovo ThinkPad X1 Carbon">
+                    <p>Processador: Intel Core i7<br>RAM: 16GB<br>Armazenamento: 1TB SSD<br>GPU: Intel UHD Graphics</p>
+                </div>
+                <div class="product-item">
+                    <h3>Lenovo Legion 7i</h3>
+                    <img src="{{ url_for('static', filename='img/lenovo_legion_7i.jpg') }}" alt="Lenovo Legion 7i">
+                    <p>Processador: Intel Core i9<br>RAM: 32GB<br>Armazenamento: 1TB SSD<br>GPU: NVIDIA GeForce RTX 3080</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Apple -->
+        <div class="product apple">
+            <h2>Apple</h2>
+            <div class="product-grid">
+                <div class="product-item">
+                    <h3>MacBook Pro 16"</h3>
+                    <img src="{{ url_for('static', filename='img/macbook_pro_16.jpg') }}" alt="MacBook Pro 16">
+                    <p>Processador: Apple M1 Pro<br>RAM: 16GB<br>Armazenamento: 512GB SSD<br>GPU: Integrated</p>
+                </div>
+                <div class="product-item">
+                    <h3>iMac 24"</h3>
+                    <img src="{{ url_for('static', filename='img/imac_24.jpg') }}" alt="iMac 24">
+                    <p>Processador: Apple M1<br>RAM: 8GB<br>Armazenamento: 256GB SSD<br>GPU: Integrated</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Asus -->
+        <div class="product asus">
+            <h2>Asus</h2>
+            <div class="product-grid">
+                <div class="product-item">
+                    <h3>Asus ROG Zephyrus G14</h3>
+                    <img src="{{ url_for('static', filename='img/asus_rog_zephyrus_g14.jpg') }}" alt="Asus ROG Zephyrus G14">
+                    <p>Processador: AMD Ryzen 9<br>RAM: 32GB<br>Armazenamento: 1TB SSD<br>GPU: NVIDIA GeForce RTX 3060</p>
+                </div>
+                <div class="product-item">
+                    <h3>Asus ZenBook 14</h3>
+                    <img src="{{ url_for('static', filename='img/asus_zenbook_14.jpg') }}" alt="Asus ZenBook 14">
+                    <p>Processador: Intel Core i7<br>RAM: 16GB<br>Armazenamento: 512GB SSD<br>GPU: Intel Iris Xe Graphics</p>
+                </div>
+            </div>
+        </div>
     </div>
 
     <footer class="footer">

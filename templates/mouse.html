@@ -1,8 +1,86 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mouses</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .product {
+            margin-bottom: 40px;
+        }
+        .product h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .product-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .product-item {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            width: 300px;
+        }
+        .product-item h3 {
+            background-color: #007bff;
+            color: #fff;
+            margin: 0;
+            padding: 10px 0;
+        }
+        .product-item img {
+            width: 100%;
+            height: auto;
+        }
+        .product-item p {
+            padding: 10px;
+            margin: 0;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar">
@@ -20,7 +98,91 @@
     <div class="container">
         <h1>Mouses</h1>
         <p>Aqui você encontra uma variedade de mouses de última geração, perfeitos para suas necessidades pessoais e profissionais.</p>
-        <!-- Adicione os detalhes dos produtos aqui -->
+
+        <!-- Logitech -->
+        <div class="product logitech">
+            <h2>Logitech</h2>
+            <div class="product-grid">
+                <div class="product-item">
+                    <h3>Logitech G502 HERO</h3>
+                    <img src="{{ url_for('static', filename='img/logitech_g502_hero.jpg') }}" alt="Logitech G502 HERO">
+                    <p>Sensor: HERO 16K<br>Resolução: 16000 DPI<br>Conectividade: USB<br>Iluminação: RGB</p>
+                </div>
+                <div class="product-item">
+                    <h3>Logitech MX Master 3</h3>
+                    <img src="{{ url_for('static', filename='img/logitech_mx_master_3.jpg') }}" alt="Logitech MX Master 3">
+                    <p>Tipo: Sem fio<br>Tecnologia: Bluetooth/USB<br>Botões: 7<br>Scroll: MagSpeed</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Razer -->
+        <div class="product razer">
+            <h2>Razer</h2>
+            <div class="product-grid">
+                <div class="product-item">
+                    <h3>Razer DeathAdder V2</h3>
+                    <img src="{{ url_for('static', filename='img/razer_deathadder_v2.jpg') }}" alt="Razer DeathAdder V2">
+                    <p>Sensor: Óptico<br>Resolução: 20000 DPI<br>Conectividade: USB<br>Iluminação: RGB</p>
+                </div>
+                <div class="product-item">
+                    <h3>Razer Basilisk Ultimate</h3>
+                    <img src="{{ url_for('static', filename='img/razer_basilisk_ultimate.jpg') }}" alt="Razer Basilisk Ultimate">
+                    <p>Tipo: Sem fio<br>Tecnologia: Razer HyperSpeed<br>Botões: 11<br>Iluminação: RGB</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Corsair -->
+        <div class="product corsair">
+            <h2>Corsair</h2>
+            <div class="product-grid">
+                <div class="product-item">
+                    <h3>Corsair Dark Core RGB Pro</h3>
+                    <img src="{{ url_for('static', filename='img/corsair_dark_core_rgb_pro.jpg') }}" alt="Corsair Dark Core RGB Pro">
+                    <p>Tipo: Sem fio<br>Sensor: Óptico<br>Resolução: 18000 DPI<br>Iluminação: RGB</p>
+                </div>
+                <div class="product-item">
+                    <h3>Corsair Ironclaw RGB</h3>
+                    <img src="{{ url_for('static', filename='img/corsair_ironclaw_rgb.jpg') }}" alt="Corsair Ironclaw RGB">
+                    <p>Sensor: Óptico<br>Resolução: 18000 DPI<br>Conectividade: USB<br>Iluminação: RGB</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SteelSeries -->
+        <div class="product steelseries">
+            <h2>SteelSeries</h2>
+            <div class="product-grid">
+                <div class="product-item">
+                    <h3>SteelSeries Rival 600</h3>
+                    <img src="{{ url_for('static', filename='img/steelseries_rival_600.jpg') }}" alt="SteelSeries Rival 600">
+                    <p>Sensor: Óptico<br>Resolução: 12000 CPI<br>Conectividade: USB<br>Peso: Ajustável</p>
+                </div>
+                <div class="product-item">
+                    <h3>SteelSeries Sensei Ten</h3>
+                    <img src="{{ url_for('static', filename='img/steelseries_sensei_ten.jpg') }}" alt="SteelSeries Sensei Ten">
+                    <p>Sensor: TrueMove Pro<br>Resolução: 18000 CPI<br>Conectividade: USB<br>Botões: 8</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- HyperX -->
+        <div class="product hyperx">
+            <h2>HyperX</h2>
+            <div class="product-grid">
+                <div class="product-item">
+                    <h3>HyperX Pulsefire Surge</h3>
+                    <img src="{{ url_for('static', filename='img/hyperx_pulsefire_surge.jpg') }}" alt="HyperX Pulsefire Surge">
+                    <p>Sensor: Pixart 3389<br>Resolução: 16000 DPI<br>Conectividade: USB<br>Iluminação: RGB</p>
+                </div>
+                <div class="product-item">
+                    <h3>HyperX Pulsefire Dart</h3>
+                    <img src="{{ url_for('static', filename='img/hyperx_pulsefire_dart.jpg') }}" alt="HyperX Pulsefire Dart">
+                    <p>Tipo: Sem fio<br>Sensor: Pixart 3389<br>Resolução: 16000 DPI<br>Iluminação: RGB</p>
+                </div>
+            </div>
+        </div>
     </div>
 
     <footer class="footer">

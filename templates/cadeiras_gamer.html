@@ -1,8 +1,89 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-    <title>Cadeira Gamer </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadeiras Gamer</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .product {
+            margin-bottom: 40px;
+        }
+        .product h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .product-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .product-item {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            width: 300px;
+        }
+        .product-item h3 {
+            background-color: #007bff;
+            color: #fff;
+            margin: 0;
+            padding: 10px 0;
+        }
+        .product-item img {
+            width: 100%;
+            height: auto;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        .product-item p {
+            padding: 10px;
+            margin: 0;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar">
@@ -18,9 +99,42 @@
     </nav>
 
     <div class="container">
-        <h1>Cadeiras gamer</h1>
-        <p>Aqui você encontra uma variedade de Cadeira Gamer última geração, perfeitos para suas necessidades pessoais e profissionais.</p>
-        <!-- Adicione os detalhes dos produtos aqui -->
+        <h1>Cadeiras Gamer</h1>
+        <p>Aqui você encontra uma variedade de Cadeiras Gamer de última geração, perfeitas para suas necessidades pessoais e profissionais.</p>
+
+        <!-- Exemplo de produtos -->
+        <div class="product">
+            <h2>Marca A</h2>
+            <div class="product-grid">
+                <div class="product-item">
+                    <h3>Modelo X</h3>
+                    <img src="{{ url_for('static', filename='img/cadeira_gamer_1.jpg') }}" alt="Cadeira Gamer Modelo X">
+                    <p>Cor: Preto<br>Material: Couro sintético<br>Reclinável: Sim<br>Preço: R$ 999,00</p>
+                </div>
+                <div class="product-item">
+                    <h3>Modelo Y</h3>
+                    <img src="{{ url_for('static', filename='img/cadeira_gamer_2.jpg') }}" alt="Cadeira Gamer Modelo Y">
+                    <p>Cor: Vermelho<br>Material: Tecido respirável<br>Reclinável: Não<br>Preço: R$ 799,00</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="product">
+            <h2>Marca B</h2>
+            <div class="product-grid">
+                <div class="product-item">
+                    <h3>Modelo Z</h3>
+                    <img src="{{ url_for('static', filename='img/cadeira_gamer_3.jpg') }}" alt="Cadeira Gamer Modelo Z">
+                    <p>Cor: Azul<br>Material: Malha respirável<br>Reclinável: Sim<br>Preço: R$ 1.199,00</p>
+                </div>
+                <div class="product-item">
+                    <h3>Modelo W</h3>
+                    <img src="{{ url_for('static', filename='img/cadeira_gamer_4.jpg') }}" alt="Cadeira Gamer Modelo W">
+                    <p>Cor: Cinza<br>Material: Couro PU<br>Reclinável: Sim<br>Preço: R$ 899,00</p>
+                </div>
+            </div>
+        </div>
+        <!-- Fim do exemplo de produtos -->
     </div>
 
     <footer class="footer">

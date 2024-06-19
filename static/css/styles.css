@@ -270,32 +270,25 @@ button {
 
     .category-card {
         width: calc(50% - 10px); /* Para ocupar 50% do espaço disponível com espaço entre as categorias */
-        max-width: 200px; /* Largura máxima do card */
+        max-width: 100%; /* Largura máxima do card */
+        height: 80px;
         padding: 8px;
         text-align: left; /* Alinha o texto à esquerda dentro do card */
     }
 
     .category img {
         width: 100%;
-        height: auto;
-        max-width: 100px; /* Largura máxima da imagem */
+
+        height: 100%;
         object-fit: cover;
-        border-radius: 10px;
     }
 
-    .category-card h3 {
+    .category-name {
+        top: -30px; /* Ajuste conforme necessário para a posição desejada em dispositivos móveis */
         font-size: 1em;
-        white-space: nowrap; /* Evita que o texto quebre linha */
-        position: static; /* Volta a posição do título para o padrão */
-        background-color: transparent; /* Remove o fundo do título */
-        color: inherit; /* Usa a cor de texto padrão */
-        border-radius: 0; /* Remove bordas arredondadas */
-        padding: 0; /* Remove o espaçamento interno */
-        margin-top: 10px; /* Adiciona margem acima do título */
+        padding: 5px 0; /* Ajuste o padding conforme necessário */
     }
 }
-
-
 
 /* Produtos em destaque */
 .featured-products {

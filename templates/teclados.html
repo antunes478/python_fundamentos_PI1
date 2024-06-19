@@ -1,8 +1,86 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-    <title>teclado</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teclados</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .product {
+            margin-bottom: 40px;
+        }
+        .product h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .product-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .product-item {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            width: 300px;
+        }
+        .product-item h3 {
+            background-color: #007bff;
+            color: #fff;
+            margin: 0;
+            padding: 10px 0;
+        }
+        .product-item img {
+            width: 100%;
+            height: auto;
+        }
+        .product-item p {
+            padding: 10px;
+            margin: 0;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar">
@@ -18,9 +96,93 @@
     </nav>
 
     <div class="container">
-        <h1>teclado</h1>
-        <p>Aqui você encontra uma variedade de teclado de última geração, perfeitos para suas necessidades pessoais e profissionais.</p>
-        <!-- Adicione os detalhes dos produtos aqui -->
+        <h1>Teclados</h1>
+        <p>Aqui você encontra uma variedade de teclados de alta qualidade, perfeitos para suas necessidades pessoais e profissionais.</p>
+
+        <!-- Logitech -->
+        <div class="product logitech">
+            <h2>Logitech</h2>
+            <div class="product-grid">
+                <div class="product-item">
+                    <h3>Logitech G Pro X</h3>
+                    <img src="{{ url_for('static', filename='img/logitech_g_pro_x.jpg') }}" alt="Logitech G Pro X">
+                    <p>Tipo: Mecânico<br>Switch: GX Blue Clicky<br>Conectividade: USB<br>Iluminação: RGB</p>
+                </div>
+                <div class="product-item">
+                    <h3>Logitech K780</h3>
+                    <img src="{{ url_for('static', filename='img/logitech_k780.jpg') }}" alt="Logitech K780">
+                    <p>Tipo: Membrana<br>Switch: Silencioso<br>Conectividade: Bluetooth/USB<br>Iluminação: Sem iluminação</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Razer -->
+        <div class="product razer">
+            <h2>Razer</h2>
+            <div class="product-grid">
+                <div class="product-item">
+                    <h3>Razer BlackWidow V3</h3>
+                    <img src="{{ url_for('static', filename='img/razer_blackwidow_v3.jpg') }}" alt="Razer BlackWidow V3">
+                    <p>Tipo: Mecânico<br>Switch: Green Switch<br>Conectividade: USB<br>Iluminação: RGB</p>
+                </div>
+                <div class="product-item">
+                    <h3>Razer Huntsman Mini</h3>
+                    <img src="{{ url_for('static', filename='img/razer_huntsman_mini.jpg') }}" alt="Razer Huntsman Mini">
+                    <p>Tipo: Mecânico<br>Switch: Opto-Mechanical<br>Conectividade: USB-C<br>Iluminação: RGB</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Corsair -->
+        <div class="product corsair">
+            <h2>Corsair</h2>
+            <div class="product-grid">
+                <div class="product-item">
+                    <h3>Corsair K95 RGB Platinum</h3>
+                    <img src="{{ url_for('static', filename='img/corsair_k95_rgb_platinum.jpg') }}" alt="Corsair K95 RGB Platinum">
+                    <p>Tipo: Mecânico<br>Switch: Cherry MX Speed<br>Conectividade: USB<br>Iluminação: RGB</p>
+                </div>
+                <div class="product-item">
+                    <h3>Corsair K55 RGB</h3>
+                    <img src="{{ url_for('static', filename='img/corsair_k55_rgb.jpg') }}" alt="Corsair K55 RGB">
+                    <p>Tipo: Membrana<br>Switch: Silencioso<br>Conectividade: USB<br>Iluminação: RGB</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SteelSeries -->
+        <div class="product steelseries">
+            <h2>SteelSeries</h2>
+            <div class="product-grid">
+                <div class="product-item">
+                    <h3>SteelSeries Apex Pro</h3>
+                    <img src="{{ url_for('static', filename='img/steelseries_apex_pro.jpg') }}" alt="SteelSeries Apex Pro">
+                    <p>Tipo: Mecânico<br>Switch: Omnipoint Adjustable<br>Conectividade: USB<br>Iluminação: RGB</p>
+                </div>
+                <div class="product-item">
+                    <h3>SteelSeries Apex 3</h3>
+                    <img src="{{ url_for('static', filename='img/steelseries_apex_3.jpg') }}" alt="SteelSeries Apex 3">
+                    <p>Tipo: Membrana<br>Switch: Silencioso<br>Conectividade: USB<br>Iluminação: RGB</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- HyperX -->
+        <div class="product hyperx">
+            <h2>HyperX</h2>
+            <div class="product-grid">
+                <div class="product-item">
+                    <h3>HyperX Alloy FPS Pro</h3>
+                    <img src="{{ url_for('static', filename='img/hyperx_alloy_fps_pro.jpg') }}" alt="HyperX Alloy FPS Pro">
+                    <p>Tipo: Mecânico<br>Switch: Cherry MX Red<br>Conectividade: USB<br>Iluminação: LED Vermelho</p>
+                </div>
+                <div class="product-item">
+                    <h3>HyperX Alloy Elite 2</h3>
+                    <img src="{{ url_for('static', filename='img/hyperx_alloy_elite_2.jpg') }}" alt="HyperX Alloy Elite 2">
+                    <p>Tipo: Mecânico<br>Switch: HyperX Red<br>Conectividade: USB<br>Iluminação: RGB</p>
+                </div>
+            </div>
+        </div>
     </div>
 
     <footer class="footer">

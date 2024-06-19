@@ -1,8 +1,86 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fones</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .product {
+            margin-bottom: 40px;
+        }
+        .product h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .product-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .product-item {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            width: 300px;
+        }
+        .product-item h3 {
+            background-color: #007bff;
+            color: #fff;
+            margin: 0;
+            padding: 10px 0;
+        }
+        .product-item img {
+            width: 100%;
+            height: auto;
+        }
+        .product-item p {
+            padding: 10px;
+            margin: 0;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar">
@@ -20,7 +98,91 @@
     <div class="container">
         <h1>Fones</h1>
         <p>Aqui você encontra uma variedade de fones de ouvido de última geração, perfeitos para suas necessidades pessoais e profissionais.</p>
-        <!-- Adicione os detalhes dos produtos aqui -->
+
+        <!-- Sony -->
+        <div class="product sony">
+            <h2>Sony</h2>
+            <div class="product-grid">
+                <div class="product-item">
+                    <h3>Sony WH-1000XM4</h3>
+                    <img src="{{ url_for('static', filename='img/sony_wh1000xm4.jpg') }}" alt="Sony WH-1000XM4">
+                    <p>Tipo: Over-ear<br>Tecnologia: Noise Cancelling<br>Conectividade: Bluetooth<br>Duração da bateria: 30 horas</p>
+                </div>
+                <div class="product-item">
+                    <h3>Sony WF-1000XM4</h3>
+                    <img src="{{ url_for('static', filename='img/sony_wf1000xm4.jpg') }}" alt="Sony WF-1000XM4">
+                    <p>Tipo: In-ear<br>Tecnologia: Noise Cancelling<br>Conectividade: Bluetooth<br>Duração da bateria: 24 horas</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bose -->
+        <div class="product bose">
+            <h2>Bose</h2>
+            <div class="product-grid">
+                <div class="product-item">
+                    <h3>Bose Noise Cancelling Headphones 700</h3>
+                    <img src="{{ url_for('static', filename='img/bose_headphones_700.jpg') }}" alt="Bose Noise Cancelling Headphones 700">
+                    <p>Tipo: Over-ear<br>Tecnologia: Noise Cancelling<br>Conectividade: Bluetooth<br>Duração da bateria: 20 horas</p>
+                </div>
+                <div class="product-item">
+                    <h3>Bose QuietComfort Earbuds</h3>
+                    <img src="{{ url_for('static', filename='img/bose_quietcomfort_earbuds.jpg') }}" alt="Bose QuietComfort Earbuds">
+                    <p>Tipo: In-ear<br>Tecnologia: Noise Cancelling<br>Conectividade: Bluetooth<br>Duração da bateria: 18 horas</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- JBL -->
+        <div class="product jbl">
+            <h2>JBL</h2>
+            <div class="product-grid">
+                <div class="product-item">
+                    <h3>JBL Live 650BTNC</h3>
+                    <img src="{{ url_for('static', filename='img/jbl_live_650btnc.jpg') }}" alt="JBL Live 650BTNC">
+                    <p>Tipo: Over-ear<br>Tecnologia: Noise Cancelling<br>Conectividade: Bluetooth<br>Duração da bateria: 30 horas</p>
+                </div>
+                <div class="product-item">
+                    <h3>JBL Tune 225TWS</h3>
+                    <img src="{{ url_for('static', filename='img/jbl_tune_225tws.jpg') }}" alt="JBL Tune 225TWS">
+                    <p>Tipo: In-ear<br>Tecnologia: Pure Bass Sound<br>Conectividade: Bluetooth<br>Duração da bateria: 25 horas</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sennheiser -->
+        <div class="product sennheiser">
+            <h2>Sennheiser</h2>
+            <div class="product-grid">
+                <div class="product-item">
+                    <h3>Sennheiser Momentum 3 Wireless</h3>
+                    <img src="{{ url_for('static', filename='img/sennheiser_momentum_3.jpg') }}" alt="Sennheiser Momentum 3 Wireless">
+                    <p>Tipo: Over-ear<br>Tecnologia: Noise Cancelling<br>Conectividade: Bluetooth<br>Duração da bateria: 17 horas</p>
+                </div>
+                <div class="product-item">
+                    <h3>Sennheiser CX 400BT</h3>
+                    <img src="{{ url_for('static', filename='img/sennheiser_cx400bt.jpg') }}" alt="Sennheiser CX 400BT">
+                    <p>Tipo: In-ear<br>Tecnologia: Bluetooth 5.1<br>Conectividade: Bluetooth<br>Duração da bateria: 20 horas</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Beats -->
+        <div class="product beats">
+            <h2>Beats</h2>
+            <div class="product-grid">
+                <div class="product-item">
+                    <h3>Beats Studio3 Wireless</h3>
+                    <img src="{{ url_for('static', filename='img/beats_studio3.jpg') }}" alt="Beats Studio3 Wireless">
+                    <p>Tipo: Over-ear<br>Tecnologia: Pure Adaptive Noise Cancelling<br>Conectividade: Bluetooth<br>Duração da bateria: 22 horas</p>
+                </div>
+                <div class="product-item">
+                    <h3>Beats Flex</h3>
+                    <img src="{{ url_for('static', filename='img/beats_flex.jpg') }}" alt="Beats Flex">
+                    <p>Tipo: In-ear<br>Conectividade: Bluetooth<br>Duração da bateria: 12 horas</p>
+                </div>
+            </div>
+        </div>
     </div>
 
     <footer class="footer">
